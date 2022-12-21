@@ -94,9 +94,8 @@ class GoogleMatrix implements GoogleMatrixContract
      * @param string $origins
      * @param string $destinations
      *
-     * @return int
      */
-    public function calculate($origins, $destinations): int
+    public function calculate($origins, $destinations)
     {
         $client = new Client();
 
