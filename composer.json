@@ -1,0 +1,56 @@
+{
+    "name": "flarone/google-matrix-api",
+    "description": "Wrapper for the Google Distance Matrix API (and Laravel friendly)",
+    "type": "library",
+    "keywords": [
+        "Google",
+        "Matrix",
+        "Google Matrix",
+        "Google Matrix Api",
+        "Google Api"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Flarone",
+            "email": "info@flarone.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^7.3|^8.0|^8.1",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^8.0|^9.3.3",
+        "orchestra/testbench": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flarone\\GoogleMatrix\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Flarone\\GoogleMatrix\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Flarone\\GoogleMatrix\\Providers\\GoogleMatrixServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/phpunit"
+        ]
+    }
+}
