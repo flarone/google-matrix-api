@@ -116,8 +116,8 @@ class GoogleMatrix implements GoogleMatrixContract
             if (200 === $statusCode) {
                 $responseData = json_decode($response->getBody()->getContents());
 
-                if (isset($responseData->rows[0]->elements[0]->distance)) {
-                    return $responseData->rows[0]->elements[0]->distance->value;
+                if (isset($responseData->rows[0]->elements[0])) {
+                    return $responseData->rows[0]->elements[0];
                 }
             }
 
